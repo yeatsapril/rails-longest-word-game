@@ -12,6 +12,7 @@ class GamesController < ApplicationController
     @html_file = JSON.parse(open(url).read)
 
     if params['word']
+      @score = 0
 
       if @html_file['found'] == true
         split_word = params[:word].upcase.split('')
@@ -22,12 +23,13 @@ class GamesController < ApplicationController
         end
 
         if result == false
-          @answer = "Sorry! #{params[:word]} can't be built from these letters"
+          @answer = "Sorry! << #{params[:word]} >> can't be built from these letters"
         else
-          @answer = "Congratulations! #{params[:word]} is a valid english word!"
+          @answer = "Congratulations! << #{params[:word]} >> is a valid english word!"
+          @score = split_word.length * 2
         end
       else
-        @answer = "Sorry! #{params[:word]} is not a valid english word."
+        @answer = "Sorry! << #{params[:word]} >> is not a valid english word."
       end
     end
   end

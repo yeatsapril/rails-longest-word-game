@@ -4,6 +4,10 @@
 .container {
   display: flex;
   justify-content: center;
+  border: solid;
+  border-radius: 8px;
+  padding: 8px;
+  background-color: lightgrey;
 }
 
 .letters {
@@ -11,5 +15,21 @@
   border: solid;
   padding: 4px 8px;
   background-color: lightblue;
+}
+
+.button {
+  margin-left: 8px;
+  padding: 4px 8px;
+  background-color: lightpink;
+  border: solid;
+  border-radius: 8px;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2, p, a {
+  font-family: helvetica;
 }
 

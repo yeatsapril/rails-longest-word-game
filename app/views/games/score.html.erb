@@ -1,3 +1,13 @@
-<%= @answer %>
+<div class="container">
+  <h2><%= @answer %></h2>
+</div>
+<br>
+<div class="container">
+  <p>Your score: <%= @score %></p>
+</div>
+<br>
+<div class="container">
+  <%= link_to "Back to the game", new_path %>
+</div>
 
-<%= link_to "Back to the game", new_path %>
+

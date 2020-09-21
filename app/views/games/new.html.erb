@@ -7,10 +7,16 @@
 <br>
 <br>
 <div class="container">
+  <br>
   <form action="/score" id="search" method="post">
     <input type="text" name="word" placeholder="Your word here..">
     <input type="submit" value="Submit!">
     <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
     <%= hidden_field_tag :letters, @letters %>
   </form>
+  <br>
+  <div class="button">
+  <%= link_to "Refresh", new_path %>
+  </div>
 </div>
+
